@@ -1,40 +1,60 @@
-GYM Management System
+# Gym Management System
 
-This project is a simple user friendly management system which helps mantain an association of gym members and trainers.
+## Description
+A comprehensive Java-based GUI application designed to streamline gym operations. This system allows gym managers to efficiently manage members, trainers, memberships, and various plans. It provides separate dashboards for administrators, members, and trainers, enabling role-based access to relevant features. Built using Java Swing for the user interface and includes data persistence capabilities.
 
-Features: 
+## Features
+- **Member Management**: Register new members, view member details, update profiles, and manage memberships.
+- **Trainer Management**: Register trainers, assign roles, and oversee trainer activities.
+- **Membership Plans**: Define different membership types with varying durations and benefits.
+- **Workout and Diet Plans**: Create and assign personalized workout and diet plans for members.
+- **Administrative Dashboards**: Dedicated interfaces for gym managers, members, and trainers with role-specific functionalities.
+- **Data Persistence**: Store and retrieve gym data using the GymDataManager class.
+- **GUI Components**: User-friendly interfaces built with Java Swing, including tables for viewing data and forms for input.
 
-Login as Manager
+## Requirements
+- Java JDK (version 8 or higher recommended)
+- Java Swing library (included in JDK)
+- Windows/Linux/Mac OS (compatible with Java)
 
--Add Member
--Add Trainer
--Delete Member
--Delete Trainer
--View Members
--View Trainers
--View Financial Report
+## How to Run
+1. Ensure Java JDK is installed and configured in your system PATH.
+2. Navigate to the project directory in your terminal or command prompt.
+3. Compile all Java source files:
+   ```
+   javac *.java
+   ```
+4. Run the application using the main GUI runner:
+   ```
+   java RunnerGUI
+   ```
+   Alternatively, you can run:
+   ```
+   java GymManagementSystem
+   ```
+5. The GUI will launch, allowing you to interact with the system.
 
-Login as Trainer
+## Project Structure
+- **Core Entities**: 
+  - `Person.java`: Base class for individuals.
+  - `Member.java`: Represents gym members.
+  - `Trainer.java`: Represents gym trainers.
+  - `Employee.java`: Base for staff.
+  - `GymManager.java`: Manages gym operations.
+- **Data Models**:
+  - `Membership.java`, `MembershipType.java`: Handle membership details.
+  - `WorkoutPlan.java`, `DietPlan.java`: Manage plans.
+  - `Goal.java`, `Duration.java`: Supporting classes.
+- **GUI Components**:
+  - Dashboard classes: `ManagerDashboard.java`, `MemberDashboard.java`, `TrainerDashboard.java`.
+  - Registration frames: `RegisterAsMember.java`, `RegisterAsTrainer.java`.
+  - Management frames: `MembersTableFrame.java`, `TrainersTableFrame.java`, `DeleteMemberFrame.java`, etc.
+  - `ComponentsGUI.java`: Shared UI components.
+- **Utilities**:
+  - `GymDataManager.java`: Handles data storage and retrieval.
+  - `Payable.java`: Interface for payment-related classes.
+  - `RunnerGUI.java`: Main entry point for the GUI application.
+- **Main Class**: `GymManagementSystem.java`: Core system logic.
 
-Login as Member
-
-Register as Member
-
-Register as Trainer
-
-Saving Data
-
-Concepts Used:
--All fundamental concepts of OOP
--ArrayLists
--Serialization
--GUI
-
-Testing:
-
-To run the program perform the following steps:
-1. Clone or download the repository
-2. Open the project in any Java IDE (IntelliJ, Eclipse, NetBeans)
-3. Run the RunnerGUI class
-
-NOTE: The project is pre-coded for the manager email to be "ali@gym.com" and manager password "admin123". The code is also initialized with 2 trainers and 5 members. the membersa nd trainers can be added or deleted according to need and saved to file permanently.
+## Author
+  Abdul Rehman
